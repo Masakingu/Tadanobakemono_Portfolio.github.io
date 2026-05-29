@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "NICOFont";          /* 💡 サイト内で使うフォントのニックネーム */
+    src: url("fonts/NICOMOJI-PLUS_V2-5.woff2") format("woff2"); /* 💡 アップロードした実際のファイル名に変えてください */
+}
+
+/* 画面全体の背景色を薄いグレーにする */
+body {
+    /* 👇 フォルダ名「pic/」を頭に付けます*/ 
+    background-image: url("pic/bg.png");
+    font-family: "NICOFont", sans-serif;
+    /* 👇 文字のギザギザを滑らかにするプロパティ（特にMac/iPhoneで効果絶大） */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    background-color: #f5f5f5;
+    background-color: #666666;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1, h2, h3, strong {
+    /* 👇 太くなりすぎて潰れている場合、これを指定するとフォント本来の綺麗な太さになります */
+    font-weight: normal; 
+}
+/* h1（Hello World）の文字を「青色」にして真ん中に寄せる */
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 100px; 
+}
+
+/*h2*/
+h2{
+    color: #784949;
+    text-align: center;
+    font-size: 80px; 
+
+}
+
+h3{
+    color: #000000;
+    text-align: center;
+    font-size: 60px; 
+}
+
+/* p（説明文）の文字を真ん中に寄せる */
+p {
+    text-align: center;
+    color: #2e2e2e;
+}
+
+/* もし作品カード（work-card）の画像だけを個別に指定したい場合 */
+.work2 img {
+    width: 60%;      /* カードの横幅ぴったりに合わせる */
+    height: 60%;    /* 💡 画像の「高さ」をすべて一律で揃えたい場合は数値を指定 */
+    object-fit: cover;/* 💡 高さを固定しても、画像が縦長に潰れたり伸びたりせず、綺麗に切り抜かれる超便利プロパティ */
+}
+
+.work4 img {
+    width: 60%;      /* カードの横幅ぴったりに合わせる */
+    height: 60%;    /* 💡 画像の「高さ」をすべて一律で揃えたい場合は数値を指定 */
+    object-fit: cover;/* 💡 高さを固定しても、画像が縦長に潰れたり伸びたりせず、綺麗に切り抜かれる超便利プロパティ */
+}
