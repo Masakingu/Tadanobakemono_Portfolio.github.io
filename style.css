@@ -63,3 +63,60 @@ p {
     height: 60%;    /* 💡 画像の「高さ」をすべて一律で揃えたい場合は数値を指定 */
     object-fit: cover;/* 💡 高さを固定しても、画像が縦長に潰れたり伸びたりせず、綺麗に切り抜かれる超便利プロパティ */
 }
+
+/*history*/
+
+/* 全体の外枠 */
+.history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 1つの出来事（1行分）の枠組み */
+.history-item {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0; /* 薄い区切り線 */
+  padding: 24px 0;
+  margin: 0;
+}
+
+/* 左列：時期 */
+.history-date {
+  width: 150px;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+/* 右列：内容 */
+.history-content {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.history-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #111111;
+}
+
+.history-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* 📱 スマホ用の表示切り替え（画面幅768px以下） */
+@media (max-width: 768px) {
+  .history-item {
+    flex-direction: column; /* 縦並びに変更 */
+    gap: 8px; /* 時期と内容のすき間 */
+  }
+  
+  .history-date {
+    width: 100%;
+  }
+}
